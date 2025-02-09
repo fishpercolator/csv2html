@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Csv2Html</title>
+  </head>
+  <body>
+    <main>
+      <form action="process" method="post" enctype="multipart/form-data" target="_blank">
+        <input type="file" name="csv">
+        <textarea name="template">
+<section>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</section>
+        </textarea>
+        <input type="submit">
+      </form>
+  </body>
+</html>

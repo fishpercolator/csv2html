@@ -26,9 +26,9 @@ class Csv2Html
       </head>
       <body>
         <main>
-        <% csv.each do |row| %>
-          <%= template.render(row.to_h) %>
-        <% end %>
+<% csv.each do |row| %>
+  <%= template.render(row.to_h) %>
+<% end %>
         </main>
       </body>
     </html>

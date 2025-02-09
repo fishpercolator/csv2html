@@ -5,8 +5,8 @@ require './csv2html'
 
 template = <<~HTML
 <section>
-  <h1><%= title %></h1>
-  <p><%= description %></p>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
 </section>
 HTML
 
@@ -16,6 +16,6 @@ Twin Peaks,Awesome
 Dirty Dancing,Acceptable
 Step Up 2,Terrible
 CSV
-csv = CSV.parse(csv_s, headers: true, header_converters: :symbol)
+csv = CSV.parse(csv_s, headers: true)
 
-puts Csv2Html.new(csv).render
+puts Csv2Html.new(csv, template).render
